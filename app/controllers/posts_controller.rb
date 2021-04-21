@@ -1,5 +1,7 @@
 class PostsController < ApplicationController
   before_action :set_post, only: %i[ show edit update destroy ]
+  http_basic_authenticate_with name: "tunombre", password: "tupassword"#, except: [:index, :show]
+
 
   # GET /posts or /posts.json
   def index

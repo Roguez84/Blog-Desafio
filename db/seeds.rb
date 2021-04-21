@@ -5,3 +5,13 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Post.destroy_all
+
+10.times do |num|
+    post = Post.create(
+        title: "#{num+1} title #{num+1}",
+        photo: "#{num+1}-photo-link-#{num+1}.com",
+        content: "Content spoiler for post ##{num+1}"
+    )
+end

@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  root 'posts#index'
+  get 'posts/dashboard', to: 'posts#new'
   resources :posts
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  #get new_post_path
+  #get 'posts/new', as: 'dashboard'
 end
